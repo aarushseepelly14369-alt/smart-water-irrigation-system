@@ -79,7 +79,7 @@ Along with the hardware and logic, this project showcases excellent teamwork. Ea
 🧑‍🤝‍🧑 Team Roles & Special Credits
 
 🧠 Team Leadership
-Captain: Bruvan a
+Captain: Bruvan 
 Vice-Captain: Aarush
 
 🧠 Planning & System Architecture
@@ -93,4 +93,29 @@ Vishwa – Developed the ESP8266 code, soil moisture logic, ultrasonic integrati
 
 🔧 Hardware Setup & Assembly
 Adeen – Assembled all hardware components, mounted sensors, installed pump and motor driver, and ensured a stable physical setup.
+
+🔋 Solar Charging + ESP8266 Monitoring Circuit
+
+This circuit demonstrates a basic solar-powered battery charging system with ESP8266-based monitoring.
+A solar panel is used to generate power, which flows through a blocking diode to safely charge a 9V battery without allowing reverse current at night.
+
+To monitor the battery voltage, an ESP8266 (such as NodeMCU) senses the battery level through a voltage divider that steps the 9V down to a safe input range for the ADC pin.
+An indicator LED is added to show charging status.
+
+The ESP8266 can further upload the battery status to cloud platforms like Blynk, Firebase, or a simple web server — enabling IoT-based solar monitorin
+
+🔁 How the Circuit Works
+
+Solar Panel → Battery
+The solar panel charges the 9V battery. The diode prevents reverse discharge.
+
+Battery → ESP8266 (Monitoring Only)
+The voltage divider reduces the battery voltage to safe ADC levels (~0–3.3V).
+ESP8266 reads this value through A0 pin.
+
+LED Indicator
+The LED turns ON when charging (panel voltage present).
+
+IoT Monitoring (Optional)
+ESP8266 can publish battery voltage to Blynk, MQTT, or a webpage.
 
