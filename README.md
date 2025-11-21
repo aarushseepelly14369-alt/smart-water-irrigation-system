@@ -117,7 +117,7 @@ LED Indicator
 The LED turns ON when charging (panel voltage present).
 
 IoT Monitoring (Optional)
-ESP8266 can publish battery voltage to Blynk, MQTT, or a webpage.
+ESP8266 can publish battery voltage to Blynk.
 
 Circuit Diagram
 
